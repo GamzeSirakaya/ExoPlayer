@@ -17,13 +17,12 @@ import com.google.android.exoplayer2.SimpleExoPlayer;
 import com.google.android.exoplayer2.ui.PlayerView;
 
 public class MainActivity extends AppCompatActivity {
-    public static PlayerView playerView;
-    public static TextView txtChannelName, txtChannelDesc, txtChannelNumber;
+    public PlayerView playerView;
+    public TextView txtChannelName, txtChannelDesc, txtChannelNumber;
     private ImageView imgChannelLogo;
     public static String drmLicenseUrl = "https://proxy.uat.widevine.com/proxy?provider=widevine_test";
     public static SimpleExoPlayer player;
     private Context mContext;
-    String videoURL = "https://i.imgur.com/7bMqysJ.mp4";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void changeChannelInitializePlayer() {
-        String path="https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_480_1_5MG.mp4";
-        Uri uri=Uri.parse(path);
+        String path = "https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_480_1_5MG.mp4";
+        Uri uri = Uri.parse(path);
         Glide.with(mContext)
                 .load(R.drawable.atv)
                 .fitCenter()
