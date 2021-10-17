@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:focusable="true"
         app:controller_layout_id="@layout/custom_controller_view"
-       />
+        app:resize_mode="fill" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
